@@ -33,6 +33,12 @@ nav ul li {
   align-items: center;
 }
 
+nav ul li a:hover {
+  color: #A8DADC;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -47,6 +53,12 @@ nav ul li a {
   width: 1.5rem;
   height: 1.5rem;
   display: inline-block;
+}
+
+.socials img:hover {
+  filter: brightness(0.8) drop-shadow(0 0 5px #A8DADC);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 
 .hero {
@@ -69,13 +81,13 @@ nav ul li a {
   text-align: left;
 }
 
-.profile-circle {
-  width: 150px;
-  height: 150px;
+.profile-image {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  background: linear-gradient(to right, lightblue, red);
   border: 3px solid white;
-  flex-shrink: 0;
+  object-fit: cover;
+  background: linear-gradient(to right, lightblue, red); /* optional gradient behind */
 }
 
 /* Tech Icons - Responsive Flexbox */
@@ -93,6 +105,12 @@ nav ul li a {
   height: 5rem;
   flex: 1 1 calc(16.66% - 60px); /* 6 per row on desktop */
   max-width: 5rem; /* Prevents oversized images */
+}
+
+.tech-icons img:hover {
+  filter: brightness(0.8) drop-shadow(0 0 5px #A8DADC);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 
 /* Responsive Design */
