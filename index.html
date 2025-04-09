@@ -21,6 +21,13 @@
                     <a href="https://github.com/ejpiamonte" target="_blank"><img src="assets/header/github_header.png" alt="GitHub"></a>
                     <a href="https://www.linkedin.com/in/earl-junior-piamonte-b825632ab/" target="_blank"><img src="assets/header/linkedin_header.png" alt="LinkedIn"></a>
                 </li>
+                <ul class="theme-toggle">
+                  <li>
+                    <a id="theme-toggle-link" href="#" aria-label="Toggle Theme">
+                      <img id="theme-icon" src="assets/sun.png" alt="Toggle Theme" style="width: 24px; height: 24px;">
+                    </a>
+                  </li>
+                </ul>
             </ul>
         </nav>
     </header>
@@ -74,13 +81,19 @@
         </div>
       </div>
     
-      <!-- Overlay Image -->
+      <!-- Video Overlay -->
       <div id="project-overlay">
-        <video id="overlay-video" autoplay loop muted playsinline>
-          <source id="video-source" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="overlay-content">
+          <video id="overlay-video" autoplay loop muted playsinline>
+            <source id="video-source" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="project-description" id="overlay-description">
+            <!-- This will be filled dynamically -->
+          </div>
+        </div>
       </div>
+      
     </section>
        
     

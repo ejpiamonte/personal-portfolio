@@ -150,6 +150,7 @@ nav ul li a {
   padding-left: 3rem;
   font-size: 1.8rem;
   margin: 2rem 0;
+  gap: 2rem;
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -158,13 +159,13 @@ nav ul li a {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: auto;
 }
 
 
 .project-list h3 {
   font-size: 2rem;
-  color: #333;
+  color: black;
 }
 
 .project-image {
@@ -180,20 +181,15 @@ nav ul li a {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-.project-item:hover {
-  color: #A8DADC;
+.project-item {
+  max-width: auto;
+  max-height: auto;
 }
 
-#project-overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  z-index: 9999;
-  padding: 2rem;
-  border-radius: 25px;
-  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Delay visibility change */
+.project-item:hover {
+  color: #A8DADC;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 
 /* For Image Overlay instead of Video
@@ -207,18 +203,16 @@ nav ul li a {
 
 #project-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* ✅ Keeps overlay centered */
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
-  justify-content: center;
-  align-items: center;
   z-index: 9999;
   opacity: 0;
-  transition: opacity 0.5s ease
+  transition: opacity 0.3s ease-in-out;
 }
+
 
 #overlay-video {
   max-width: 90vw;
@@ -227,6 +221,14 @@ nav ul li a {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
+.overlay-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 
 
@@ -312,4 +314,89 @@ nav ul li a {
   .project img {
     max-width: 200px;
   }
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+body.dark-mode nav ul li a {
+  color: white;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #A8DADC;
+}
+
+body.dark-mode .project-list h3 {
+  color: #f0f0f0;
+}
+
+body.dark-mode .hero-text h1,
+body.dark-mode .hero-text h2,
+body.dark-mode .hero-text p {
+  color: white;
+}
+
+body.dark-mode .project-item:hover {
+  color: #A8DADC;
+}
+
+body.dark-mode .profile-image {
+  border-color: white;
+}
+
+/* Optional: change box shadows or other bright elements */
+body.dark-mode #overlay-video {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .project-description {
+  color: white;
+}
+
+body.dark-mode header {
+  background-color: #ffffff; /* Light background for dark mode navbar */
+  color: #000000;            /* Dark text */
+}
+
+body.dark-mode nav ul li a {
+  color: #000000;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #457B9D; /* Optional accent */
+}
+
+body.dark-mode .socials img {
+  filter: invert(1); /* Inverts white icons to black */
+}
+
+#theme-icon {
+  border: none; /* Removes any border */
+  background-color: transparent; /* Ensures transparency */
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: #121212; /* Dark background */
+  color: white;
+}
+
+body.dark-theme header {
+  background-color: #333; /* Dark navbar */
+}
+
+body.dark-theme nav ul li a {
+  color: white; /* Change links to white in dark mode */
+}
+
+body.dark-theme .theme-toggle a img {
+  filter: invert(1); /* Invert icons' colors in dark mode */
 }
