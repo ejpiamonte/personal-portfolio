@@ -23,7 +23,7 @@ header {
 nav ul {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
   padding: 0;
   list-style: none;
 }
@@ -45,6 +45,7 @@ nav ul li a {
 }
 
 .socials {
+  margin-left: 2rem;
   display: flex;
   gap: 1rem;
 }
@@ -101,7 +102,7 @@ nav ul li a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 60px;
-  max-width: 900px; /* Adjust based on your layout */
+  max-width: 900px; 
   margin: auto;
 }
 
@@ -143,13 +144,25 @@ nav ul li a {
   margin-bottom: 4rem;
 }
 
-.project-title {
+.project-list {
   flex: 1;
   text-align: left;
   padding-left: 3rem;
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
 }
 
-.project-title h3 {
+
+.project-list h3 {
   font-size: 2rem;
   color: #333;
 }
@@ -167,28 +180,6 @@ nav ul li a {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-
-.project-item {
-  font-size: 1.8rem;
-  margin: 2rem 0;
-  padding: 1rem 3rem;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.project-list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; /* left align */
-  height: 100vh; /* full screen height */
-  padding-left: 5rem; /* adjust for spacing */
-}
-
-
 .project-item:hover {
   color: #A8DADC;
 }
@@ -202,17 +193,19 @@ nav ul li a {
   z-index: 9999;
   padding: 2rem;
   border-radius: 25px;
-  
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Delay visibility change */
 }
 
+/* For Image Overlay instead of Video
 #project-overlay img {
   max-width: 90vw;
   max-height: 80vh;
   border-radius: 25px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
+*/
 
-.project-overlay {
+#project-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -223,23 +216,17 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-}
-
-
-.carousel img {
-  max-width: 70vw;
-  max-height: 70vh;
-  border-radius: 10px;
-  object-fit: contain;
-  transition: opacity 0.5s ease-in-out;
-  position: absolute;
   opacity: 0;
+  transition: opacity 0.5s ease
 }
 
-.carousel img.active {
-  opacity: 1;
-  position: relative;
+#overlay-video {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
+
 
 
 
@@ -297,6 +284,10 @@ nav ul li a {
 
   .project img {
     max-width: 300px;
+  }
+
+  .socials {
+    margin-right: 2rem;
   }
 }
 
