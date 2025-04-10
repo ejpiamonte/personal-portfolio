@@ -3,11 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector('nav ul');
 
   menuToggle.addEventListener('click', () => {
-<<<<<<< HEAD
-      navMenu.classList.toggle('open');
-  });
-});
-=======
     navMenu.classList.toggle('open');
   });
 
@@ -104,4 +99,3 @@ window.addEventListener('scroll', () => {
 
   console.log("Video Cache Loaded:", videoCache);
 });
->>>>>>> origin/main

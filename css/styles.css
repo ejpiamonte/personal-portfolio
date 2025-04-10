@@ -23,11 +23,7 @@ header {
 nav ul {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  gap: 20px;
-=======
   gap: 2rem;
->>>>>>> origin/main
   padding: 0;
   list-style: none;
 }
@@ -37,25 +33,19 @@ nav ul li {
   align-items: center;
 }
 
-<<<<<<< HEAD
-=======
 nav ul li a:hover {
   color: #A8DADC;
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }
 
->>>>>>> origin/main
 nav ul li a {
   color: white;
   text-decoration: none;
 }
 
 .socials {
-<<<<<<< HEAD
-=======
   margin-left: 2rem;
->>>>>>> origin/main
   display: flex;
   gap: 1rem;
 }
@@ -66,15 +56,12 @@ nav ul li a {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-=======
 .socials img:hover {
   filter: brightness(0.8) drop-shadow(0 0 5px #A8DADC);
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }
 
->>>>>>> origin/main
 .hero {
   display: flex;
   justify-content: space-between;
@@ -92,18 +79,6 @@ nav ul li a {
 
 .hero-text {
   flex: 1;
-<<<<<<< HEAD
-  text-align: left;
-}
-
-.profile-circle {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: linear-gradient(to right, lightblue, red);
-  border: 3px solid white;
-  flex-shrink: 0;
-=======
   font-size: 1.2rem;
   text-align: left;
 }
@@ -119,7 +94,6 @@ nav ul li a {
 
 .flex-container-techstack {
   margin-top: 5rem; /* or try 24px / 2rem */
->>>>>>> origin/main
 }
 
 /* Tech Icons - Responsive Flexbox */
@@ -128,21 +102,11 @@ nav ul li a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 60px;
-<<<<<<< HEAD
-  max-width: 900px; /* Adjust based on your layout */
-=======
   max-width: 900px; 
->>>>>>> origin/main
   margin: auto;
 }
 
 .tech-icons img {
-<<<<<<< HEAD
-  width: 5rem;
-  height: 5rem;
-  flex: 1 1 calc(16.66% - 60px); /* 6 per row on desktop */
-  max-width: 5rem; /* Prevents oversized images */
-=======
   max-width: 5rem;
   max-height: 5rem;
   object-fit: contain;
@@ -153,7 +117,6 @@ nav ul li a {
   filter: brightness(0.8) drop-shadow(0 0 5px #A8DADC);
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
->>>>>>> origin/main
 }
 
 /* Responsive Design */
@@ -166,8 +129,6 @@ nav ul li a {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
 .projects {
   margin: 5rem auto;
   max-width: 1100px;
@@ -271,7 +232,6 @@ nav ul li a {
 
 
 
->>>>>>> origin/main
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -327,13 +287,10 @@ nav ul li a {
   .project img {
     max-width: 300px;
   }
-<<<<<<< HEAD
-=======
 
   .socials {
     margin-right: 2rem;
   }
->>>>>>> origin/main
 }
 
 @media (max-width: 480px) {
@@ -358,8 +315,6 @@ nav ul li a {
     max-width: 200px;
   }
 }
-<<<<<<< HEAD
-=======
 
 body.dark-mode {
   background-color: #121212;
@@ -445,4 +400,3 @@ body.dark-theme nav ul li a {
 body.dark-theme .theme-toggle a img {
   filter: invert(1); /* Invert icons' colors in dark mode */
 }
->>>>>>> origin/main
