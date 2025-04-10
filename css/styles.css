@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 15px 50px;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials img {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to right, lightblue, red);
+  border: 3px solid white;
+  flex-shrink: 0;
+}
+
+/* Tech Icons - Responsive Flexbox */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  max-width: 900px; /* Adjust based on your layout */
+  margin: auto;
+}
+
+.tech-icons img {
+  width: 5rem;
+  height: 5rem;
+  flex: 1 1 calc(16.66% - 60px); /* 6 per row on desktop */
+  max-width: 5rem; /* Prevents oversized images */
+}
+
+/* Responsive Design */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .profile-circle {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .tech-icons {
+    gap: 40px; /* Reduce gap for tablets */
+  }
+
+  .tech-icons img {
+    flex: 1 1 calc(25% - 40px); /* 4 per row */
+  }
+
+  .project img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    text-align: center;
+  }
+
+  .profile-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tech-icons {
+    gap: 20px; /* Reduce gap for mobile */
+  }
+
+  .tech-icons img {
+    flex: 1 1 calc(50% - 20px); /* 2 per row */
+  }
+
+  .project img {
+    max-width: 200px;
+  }
+}
