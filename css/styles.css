@@ -83,6 +83,13 @@ nav ul li a {
   text-align: left;
 }
 
+/* Gradient text style */
+.highlight {
+  background: linear-gradient(90deg, #00C9FF, #92FE9D); /* Blue to green gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .profile-image {
   width: 250px;
   height: 250px;
@@ -104,6 +111,10 @@ nav ul li a {
   gap: 60px;
   max-width: 900px; 
   margin: auto;
+}
+
+.skills h2 {
+  font-size: 1.8rem;
 }
 
 .tech-icons img {
@@ -138,6 +149,10 @@ nav ul li a {
   text-align: center;
 }
 
+.projects h2 {
+  font-size: 1.8rem;
+}
+
 .project {
   display: flex;
   align-items: center;
@@ -148,7 +163,7 @@ nav ul li a {
   flex: 1;
   text-align: left;
   padding-left: 3rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 2rem 0;
   gap: 2rem;
   cursor: pointer;
@@ -378,6 +393,12 @@ body.dark-mode .socials img {
   filter: invert(1); /* Inverts white icons to black */
 }
 
+body.dark-mode .highlight {
+  background: linear-gradient(90deg, #9B4DCA, #FF6B00); /* Orange to soft red */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #theme-icon {
   border: none; /* Removes any border */
   background-color: transparent; /* Ensures transparency */
@@ -400,3 +421,5 @@ body.dark-theme nav ul li a {
 body.dark-theme .theme-toggle a img {
   filter: invert(1); /* Invert icons' colors in dark mode */
 }
+=======
+>>>>>>> 9ee9b31 (macbook commit)
