@@ -23,7 +23,11 @@ header {
 nav ul {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   gap: 20px;
+=======
+  gap: 2rem;
+>>>>>>> origin/main
   padding: 0;
   list-style: none;
 }
@@ -33,12 +37,25 @@ nav ul li {
   align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+nav ul li a:hover {
+  color: #A8DADC;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+>>>>>>> origin/main
 nav ul li a {
   color: white;
   text-decoration: none;
 }
 
 .socials {
+<<<<<<< HEAD
+=======
+  margin-left: 2rem;
+>>>>>>> origin/main
   display: flex;
   gap: 1rem;
 }
@@ -49,6 +66,15 @@ nav ul li a {
   display: inline-block;
 }
 
+<<<<<<< HEAD
+=======
+.socials img:hover {
+  filter: brightness(0.8) drop-shadow(0 0 5px #A8DADC);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+>>>>>>> origin/main
 .hero {
   display: flex;
   justify-content: space-between;
@@ -66,6 +92,7 @@ nav ul li a {
 
 .hero-text {
   flex: 1;
+<<<<<<< HEAD
   text-align: left;
 }
 
@@ -76,6 +103,23 @@ nav ul li a {
   background: linear-gradient(to right, lightblue, red);
   border: 3px solid white;
   flex-shrink: 0;
+=======
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  background: linear-gradient(to right, lightblue, red); /* optional gradient behind */
+}
+
+.flex-container-techstack {
+  margin-top: 5rem; /* or try 24px / 2rem */
+>>>>>>> origin/main
 }
 
 /* Tech Icons - Responsive Flexbox */
@@ -84,15 +128,32 @@ nav ul li a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 60px;
+<<<<<<< HEAD
   max-width: 900px; /* Adjust based on your layout */
+=======
+  max-width: 900px; 
+>>>>>>> origin/main
   margin: auto;
 }
 
 .tech-icons img {
+<<<<<<< HEAD
   width: 5rem;
   height: 5rem;
   flex: 1 1 calc(16.66% - 60px); /* 6 per row on desktop */
   max-width: 5rem; /* Prevents oversized images */
+=======
+  max-width: 5rem;
+  max-height: 5rem;
+  object-fit: contain;
+  flex: 1 1 calc(16.66% - 60px);
+}
+
+.tech-icons img:hover {
+  filter: brightness(0.8) drop-shadow(0 0 5px #A8DADC);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+>>>>>>> origin/main
 }
 
 /* Responsive Design */
@@ -105,6 +166,112 @@ nav ul li a {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+.projects {
+  margin: 5rem auto;
+  max-width: 1100px;
+}
+
+.projects h2, .projects p {
+  text-align: center;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.project-list {
+  flex: 1;
+  text-align: left;
+  padding-left: 3rem;
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  gap: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+}
+
+
+.project-list h3 {
+  font-size: 2rem;
+  color: black;
+}
+
+.project-image {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.project-item {
+  max-width: auto;
+  max-height: auto;
+}
+
+.project-item:hover {
+  color: #A8DADC;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* For Image Overlay instead of Video
+#project-overlay img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+*/
+
+#project-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* ✅ Keeps overlay centered */
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+#overlay-video {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+>>>>>>> origin/main
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -160,6 +327,13 @@ nav ul li a {
   .project img {
     max-width: 300px;
   }
+<<<<<<< HEAD
+=======
+
+  .socials {
+    margin-right: 2rem;
+  }
+>>>>>>> origin/main
 }
 
 @media (max-width: 480px) {
@@ -184,3 +358,91 @@ nav ul li a {
     max-width: 200px;
   }
 }
+<<<<<<< HEAD
+=======
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+body.dark-mode nav ul li a {
+  color: white;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #A8DADC;
+}
+
+body.dark-mode .project-list h3 {
+  color: #f0f0f0;
+}
+
+body.dark-mode .hero-text h1,
+body.dark-mode .hero-text h2,
+body.dark-mode .hero-text p {
+  color: white;
+}
+
+body.dark-mode .project-item:hover {
+  color: #A8DADC;
+}
+
+body.dark-mode .profile-image {
+  border-color: white;
+}
+
+/* Optional: change box shadows or other bright elements */
+body.dark-mode #overlay-video {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .project-description {
+  color: white;
+}
+
+body.dark-mode header {
+  background-color: #ffffff; /* Light background for dark mode navbar */
+  color: #000000;            /* Dark text */
+}
+
+body.dark-mode nav ul li a {
+  color: #000000;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #457B9D; /* Optional accent */
+}
+
+body.dark-mode .socials img {
+  filter: invert(1); /* Inverts white icons to black */
+}
+
+#theme-icon {
+  border: none; /* Removes any border */
+  background-color: transparent; /* Ensures transparency */
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: #121212; /* Dark background */
+  color: white;
+}
+
+body.dark-theme header {
+  background-color: #333; /* Dark navbar */
+}
+
+body.dark-theme nav ul li a {
+  color: white; /* Change links to white in dark mode */
+}
+
+body.dark-theme .theme-toggle a img {
+  filter: invert(1); /* Invert icons' colors in dark mode */
+}
+>>>>>>> origin/main

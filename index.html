@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>EJ Piamonte | Portfolio</title>
+=======
+    <meta property="og:title" content="My Portfolio - EJ" />
+    <meta property="og:description" content="Check out my projects and skills!" />
+    <meta property="og:image" content="assets\favicon.ico" />
+    <meta property="og:url" content="https://ejpiamonte.github.io/personal-portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EJ Portfolio" />
+    <title>EJ Piamonte | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets\favicon.ico">
+>>>>>>> origin/main
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/script.js"></script>
 </head>
@@ -17,10 +28,24 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li class="socials">
+<<<<<<< HEAD
                     <a href="#"><img src="assets/header/facebook_header.png" alt="Facebook"></a>
                     <a href="#"><img src="assets/header/github_header.png" alt="GitHub"></a>
                     <a href="#"><img src="assets/header/linkedin_header.png" alt="LinkedIn"></a>
                 </li>
+=======
+                    <a href="https://web.facebook.com/ejpp21" target="_blank"><img src="assets/header/facebook_header.png" alt="Facebook"></a>
+                    <a href="https://github.com/ejpiamonte" target="_blank"><img src="assets/header/github_header.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/earl-junior-piamonte-b825632ab/" target="_blank"><img src="assets/header/linkedin_header.png" alt="LinkedIn"></a>
+                </li>
+                <ul class="theme-toggle">
+                  <li>
+                    <a id="theme-toggle-link" href="#" aria-label="Toggle Theme">
+                      <img id="theme-icon" src="assets/sun.png" alt="Toggle Theme" style="width: 24px; height: 24px;">
+                    </a>
+                  </li>
+                </ul>
+>>>>>>> origin/main
             </ul>
         </nav>
     </header>
@@ -33,7 +58,11 @@
               <p>Let's build the future, one line of code at a time.</p>
           </div>
           <div style="display: flex;">
+<<<<<<< HEAD
             <div class="profile-circle" style="margin: auto;"></div>
+=======
+            <img src="assets/EJ 1x1.jpg" alt="Profile" class="profile-image" style="margin: auto;">
+>>>>>>> origin/main
           </div>
         </div>
     </section>
@@ -60,6 +89,7 @@
         </div>
     </section>
     
+<<<<<<< HEAD
     <section id="projects">
         <h2>Projects</h2>
         <p>Softwares I've built</p>
@@ -72,6 +102,38 @@
           <img src="assets/pantigturo/pantigturo_page1.png" alt="Pantigturo">
       </div>
     </section>
+=======
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <p>Softwares I've built</p>
+    
+      <div class="project-list">
+        <div class="project-item" data-video="assets/pantigturo/Pantigturo.mp4">
+          <h3>Pantigturo</h3>
+        </div>
+      
+        <div class="project-item" data-video="assets/parkwise/Parkwise.mp4">
+          <h3>ParkWise</h3>
+        </div>
+      </div>
+    
+      <!-- Video Overlay -->
+      <div id="project-overlay">
+        <div class="overlay-content">
+          <video id="overlay-video" autoplay loop muted playsinline>
+            <source id="video-source" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="project-description" id="overlay-description">
+            <!-- This will be filled dynamically -->
+          </div>
+        </div>
+      </div>
+      
+    </section>
+       
+    
+>>>>>>> origin/main
     
 </body>
 </html>
