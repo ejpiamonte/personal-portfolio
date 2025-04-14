@@ -15,6 +15,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeIcon = document.getElementById('theme-icon');
   const body = document.body;
 
+  const icon = document.getElementById('messageIcon');
+  const popup = document.getElementById('contactPopup');
+
+  let isPopupVisible = false;
+
+icon.addEventListener('click', () => {
+  const isMobile = window.innerWidth <= 768; // adjust if needed
+
+  if (isMobile) {
+    isPopupVisible = !isPopupVisible;
+
+    if (isPopupVisible) {
+      popup.style.display = 'block';
+      requestAnimationFrame(() => popup.classList.add('show'));
+    } else {
+      popup.classList.remove('show');
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 300); // wait for animation
+    }
+  }
+});
+
+// Optional: click outside to close (only on mobile)
+document.addEventListener('click', function (e) {
+  const isMobile = window.innerWidth <= 768;
+
+  if (
+    isMobile &&
+    isPopupVisible &&
+    !icon.contains(e.target) &&
+    !popup.contains(e.target)
+  ) {
+    popup.classList.remove('show');
+    isPopupVisible = false;
+    setTimeout(() => {
+      popup.style.display = 'none';
+    }, 300);
+  }
+});
+
+  icon.addEventListener('mouseenter', () => {
+    popup.style.display = 'block';
+  });
+
+  icon.addEventListener('mouseleave', () => {
+    popup.style.display = 'none';
+  });
+
+  popup.addEventListener('mouseenter', () => {
+    popup.style.display = 'block';
+  });
+
+  popup.addEventListener('mouseleave', () => {
+    popup.style.display = 'none';
+  });
+  
   themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
 

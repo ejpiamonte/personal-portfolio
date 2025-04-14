@@ -149,6 +149,8 @@ nav ul li a {
   cursor: pointer;
 }
 
+/* ----- Project Section ----- */
+
 .projects {
   margin: 5rem auto;
   max-width: 1100px;
@@ -185,7 +187,6 @@ nav ul li a {
   align-items: flex-start;
   height: auto;
 }
-
 
 .project-list h3 {
   font-size: 2rem;
@@ -225,6 +226,8 @@ nav ul li a {
 }
 */
 
+/* ----- Overlay CSS  ----- */
+
 #project-overlay {
   position: fixed;
   top: 50%;
@@ -236,7 +239,6 @@ nav ul li a {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-
 
 #overlay-video {
   max-width: 90vw;
@@ -254,6 +256,71 @@ nav ul li a {
   flex-wrap: wrap;
 }
 
+
+
+/* ----- Message Icon ----- */
+
+.contact-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.message-icon {
+  font-size: 32px;
+  cursor: pointer;
+  background-color: #1e1e1e;
+  padding: 12px;
+  border-radius: 50%;
+  border: 2px solid #00bfff;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.message-icon:hover {
+  background-color: #00bfff;
+  color: #0d0d0d;
+}
+
+.contact-popup {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #00bfff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 250px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+  color: #000;
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-popup p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.contact-popup a .calendly{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-popup a:hover {
+  text-decoration: underline;
+}
+
+/* Show popup on hover */
+.contact-container:hover .contact-popup {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
 
 
 @media (max-width: 768px) {
@@ -432,4 +499,15 @@ body.dark-mode .highlight {
   background-color: transparent; /* Ensures transparency */
 }
 
+/* 🌙 Dark mode support */
+body.dark-mode .contact-popup {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-color: #00bfff;
+}
 
+body.dark-mode .message-icon {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 2px solid #00bfff;
+}
