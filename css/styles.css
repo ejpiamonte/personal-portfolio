@@ -268,13 +268,17 @@ nav ul li a {
 }
 
 .message-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 32px;
-  cursor: pointer;
   background-color: #1e1e1e;
-  padding: 12px;
   border-radius: 50%;
   border: 2px solid #00bfff;
   color: #fff;
+  cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -382,7 +386,7 @@ nav ul li a {
   }
 
   .tech-icons {
-    gap: 40px; /* Reduce gap for tablets */
+    gap: 30px; /* Reduce gap for tablets */
   }
 
   .tech-icons img {
@@ -410,7 +414,7 @@ nav ul li a {
   }
 
   .tech-icons {
-    gap: 20px; /* Reduce gap for mobile */
+    gap: 30px; /* Reduce gap for mobile */
   }
 
   .tech-icons img {
