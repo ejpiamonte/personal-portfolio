@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('nav ul');
 
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+
   const items = document.querySelectorAll('.project-item');
   const overlay = document.getElementById('project-overlay');
   const videoCache = {}; // Store preloaded videos
@@ -16,22 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let isPopupVisible = false;
 
-  
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-  });
-
   function scrollToSection(id) {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
       history.replaceState(null, null, ' '); // This removes the # from the URL
     }}
-
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-  });
-
+    
 icon.addEventListener('click', () => {
   const isMobile = window.innerWidth <= 768; // adjust if needed
 
