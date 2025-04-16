@@ -571,3 +571,9 @@ body.dark-mode .message-icon {
   color: #fff;
   border: 2px solid #00bfff;
 }
+
+body.dark-mode .achievements {
+  padding: 60px 20px;
+  background-color: #2b2b2b;
+  text-align: center;
+}
